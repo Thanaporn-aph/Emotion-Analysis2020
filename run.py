@@ -6,7 +6,7 @@ Created on Sun Mar  8 13:10:42 2020
 """
 
 #Load file
-
+# Om jaa
 import os
 
 # detect the current working directory and print it
