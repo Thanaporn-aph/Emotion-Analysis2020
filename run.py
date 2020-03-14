@@ -36,6 +36,7 @@ NRC_ht_emo = NRC_ht_emo[["Emotion","Hashtag_new"]].drop_duplicates(keep='last')
 Emoji_emo = pd.read_excel("Emoticon list.xlsx")
 
 # https://pdfs.semanticscholar.org/b95c/23d16faaadf40522fadf7b2938aacc9e3e78.pdf?_ga=2.175739874.1991890535.1583618527-851810122.1582499693 
+# https://saifmohammad.com/WebPages/nrc-vad.html
 a_score = pd.read_csv("a-scores.txt",sep='\t',names = ["word", "a_score"])
 a_score = pd.DataFrame(a_score)
 v_score = pd.read_csv("v-scores.txt",sep='\t',names = ["word", "v_score"])
@@ -61,10 +62,10 @@ output_id = m.main(tweet_data,NRC_Emo,NRC_ht_emo,Emoji_emo,a_score,v_score,EmoCl
 # Extract using API and Label data for each class
 # ========================================================================= #
 
-consumer_key= '05QRcauWKUjmG6NdoTaJ5RJlR'
-consumer_secret= 'cl0cveUs3uKwoDk6jzqMP3NQDlyZqBqjF7LPVDybJehAcyZzjC'
-access_token= '1225411734606884865-MQFToe2bFpBTo2WQMe1JM45h9ewqOq'
-access_token_secret= 'xgO4gi1h4HY0g20JDGbnGjomZk1ztv11tI0fzzfRU5Ciq'
+consumer_key= ''
+consumer_secret= ''
+access_token= ''
+access_token_secret= ''
 date = "2020-01-01" ##Get the tweets since..
 
 ## Happy
