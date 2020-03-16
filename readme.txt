@@ -17,7 +17,7 @@ required python library
 9.	demoji
 
 ==================================================
-To test the program with sampling data (20 records)
+To test the program with sample data (sample_input.csv=20 records)
 ==================================================
 1) open run.py file
 2) set Current Python Directory path
