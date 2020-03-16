@@ -4,6 +4,7 @@ Created on Sun Mar  8 13:09:45 2020
 
 @author: User
 """
+
 from nltk.corpus import wordnet 
 
 def synonyms(wordList):
