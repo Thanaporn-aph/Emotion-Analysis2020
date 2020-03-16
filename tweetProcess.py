@@ -4,10 +4,6 @@ Created on Thu Feb 20 17:44:50 2020
 
 @author: User
 """
-# https://gist.github.com/vickyqian/f70e9ab3910c7c290d9d715491cde44c
-
-# ================================================= #
-# https://www.earthdatascience.org/courses/earth-analytics-python/using-apis-natural-language-processing-twitter/get-and-use-twitter-data-in-python/
 
 import tweepy as tw
 import pandas as pd
