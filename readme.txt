@@ -41,4 +41,4 @@ crawling tweets and Label data for each class
 *note* line 21 create output folder (Run only first time & Dont change the name!)
 
 ===========================================================================
-After run the program, all output data will be stored at output floder 
+After run the program, all output data will be stored at output folder 
