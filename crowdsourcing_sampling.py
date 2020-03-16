@@ -4,13 +4,13 @@ Created on Wed Mar 11 23:00:17 2020
 
 @author: User
 """
-
-Happy_id = pd.read_csv("..\\Happy.csv")
-Fear_id = pd.read_csv("D:\\UofG\\Master\\Web Science\\Emotion Analysis\\EmotionData\\data\\Fear.csv")
-Excitement_id = pd.read_csv("D:\\UofG\\Master\\Web Science\\Emotion Analysis\\EmotionData\\data\\Excitement.csv")
-Angry_id = pd.read_csv("D:\\UofG\\Master\\Web Science\\Emotion Analysis\\EmotionData\\data\\Angry.csv")
-Surprise_id = pd.read_csv("D:\\UofG\\Master\\Web Science\\Emotion Analysis\\EmotionData\\data\\Surprise.csv")
-Pleasant_id = pd.read_csv("D:\\UofG\\Master\\Web Science\\Emotion Analysis\\EmotionData\\data\\Pleasant.csv")
+import pandas as pd
+Happy_id = pd.read_csv("Emotions_6Class\\Happy.csv")
+Fear_id = pd.read_csv("Emotions_6Class\\Fear.csv")
+Excitement_id = pd.read_csv("Emotions_6Class\\Excitement.csv")
+Angry_id = pd.read_csv("Emotions_6Class\\Angry.csv")
+Surprise_id = pd.read_csv("Emotions_6Class\\Surprise.csv")
+Pleasant_id = pd.read_csv("Emotions_6Class\\Pleasant.csv")
 
 check = Happy_id.append([Fear_id,Excitement_id,Angry_id,Surprise_id,Pleasant_id])[["tweet_id","ClassLabel"]]
 sum(check["tweet_id"].duplicated())
