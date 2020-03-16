@@ -108,7 +108,7 @@ Angry_id = m.main(tweet_data,NRC_Emo,NRC_ht_emo,Emoji_emo,a_score,v_score,EmoCla
 ## Surprise
 EmoClass = "Surprise"
 total = 10
-wordList = ["sad","regret",'guity'] #define seed words
+wordList = ["sad","regret",'guilty'] #define seed words
 hashTags = syn.synonyms(wordList) #get more seed word with synonyms
 tweet_data = api.twAPI(consumer_key,consumer_secret,access_token,access_token_secret,hashTags,total,date)
 Surprise_id = m.main(tweet_data,NRC_Emo,NRC_ht_emo,Emoji_emo,a_score,v_score,EmoClass)
