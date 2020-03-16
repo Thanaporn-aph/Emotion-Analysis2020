@@ -5,6 +5,7 @@ Created on Sun Mar  8 13:08:20 2020
 @author: User
 """
 
+
 import tweepy as tw
 
 def twAPI(consumer_key,consumer_secret,access_token,access_token_secret,hashTags,total,date):
