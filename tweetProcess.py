@@ -86,11 +86,11 @@ def less3Eng(text):
 
 def pre_lex(cleaned_text):
     stop_words = stopwords.words('english') 
-    cleaned_text = re.sub('@[^\s]+', 'AT_USER', cleaned_text) # remove usernames
+    cleaned_text = re.sub('@[^\s]+', 'AT_USER', cleaned_text) # replace @username with AT_USER
     tokenize = word_tokenize(cleaned_text)
     word = [word for word in tokenize if word not in stop_words] #remove stop word
-    word = [word for word in tokenize if word not in ["URL","AT_USER"]]
-    word1 = [word1 for word1 in word if word1 not in list(punctuation)] #remove special charater
+    word = [word for word in word if word not in ["URL","AT_USER"]] # remove usernames, URL
+    word1 = [word1 for word1 in word if word1 not in list(punctuation)] #remove special character
     word1 = pd.DataFrame(word1).rename(columns={0: "word"})
     return(word1)
 
@@ -214,7 +214,7 @@ def emoticon(text):
     excited = ['＼(~o~)／','＼(^o^)／','＼(-o-)／','ヽ(^。^)ノ','ヽ(^o^)丿','(*^0^*)']
     for each in excited:
         if each in text:
-            score["Excited"] += 1 
+            score["Excitement"] += 1 
     fear = ["D‑':",'D:<','D:','D8','D;','D=','DX']
     for each in fear:
         if each in text:
@@ -245,7 +245,7 @@ def class_label(text,cleaned_text,endHashtag,NRC_Emo,NRC_ht_emo,Emoji_emo,stop_w
     text_score = text_lexicon(pre_text,NRC_Emo,stop_words)
     hashtag_score = hashtag_lexicon(endHashtag,NRC_Emo,NRC_ht_emo)
     emoji_score = emoji(cleaned_text,Emoji_emo)
-    emoticon_score = emoticon(text)
+    emoticon_score = emoticon(cleaned_text)
     score = total_score(text_score,hashtag_score,emoji_score,emoticon_score)
     max_score = score.loc[0][score.loc[0]==(max(score.loc[0]))]
     if ("Positive" in max_score)&("Negative" in max_score):
